@@ -1,34 +1,39 @@
-#Create Request Auth Token
+#Create superuser for generating token
+    command : python manage.py createsuperuser
+    1. username = "Your username"
+    2. password = "Your password"
 
-API URL :  http://127.0.0.1:8000/api-token-auth/
-END Points : { username : superuser usename, password : superuser password }
+
+#Create Request Auth Token
+    API URL :  http://127.0.0.1:8000/api-token-auth/
+    END Points : { username : superuser usename, password : superuser password }
 
 
 #Create Sensors
-API URL :  http://127.0.0.1:8000/api/sensor/sensors/
-Pass Token : Hearder : Authorization: Token 123erfnbb3hdiue2isdbbbewdbe
-
-END Points : {
-    "name": "Temperature Sensor",
-    "sensor_type": "ENV",
-    "location": "Office",
-    "owner": 1
-}
+    API URL :  http://127.0.0.1:8000/api/sensor/sensors/
+    Pass Token : Hearder : Authorization: Token 123erfnbb3hdiue2isdbbbewdbe
+    
+    END Points : {
+        "name": "Temperature Sensor",
+        "sensor_type": "ENV",
+        "location": "Office",
+        "owner": 1
+    }
 
 # Save Data Capture by sensor 
-API URL : http://127.0.0.1:8000/api/sensor/sensor-data/
-Pass Token : Hearder : Authorization: Token 123erfnbb3hdiue2isdbbbewdbe
-
-END Points : {
-    "sensor":"4bac6b90-e2d8-4c36-9638-54da23197be0",
-    "data": "23.5",
-    "timestamp": "2024-03-04T12:00:00Z"
-}
+    API URL : http://127.0.0.1:8000/api/sensor/sensor-data/
+    Pass Token : Hearder : Authorization: Token 123erfnbb3hdiue2isdbbbewdbe
+    
+    END Points : {
+        "sensor":"4bac6b90-e2d8-4c36-9638-54da23197be0",
+        "data": "23.5",
+        "timestamp": "2024-03-04T12:00:00Z"
+    }
 
 #Get all sensors data
-API URL : http://127.0.0.1:8000/api/sensor/get-sensor-data/
-Pass Token : Hearder : Authorization: Token 123erfnbb3hdiue2isdbbbewdbe
+    API URL : http://127.0.0.1:8000/api/sensor/get-sensor-data/
+    Pass Token : Hearder : Authorization: Token 123erfnbb3hdiue2isdbbbewdbe
 
 #Get specific Sensor data with uuid
-Pass Token : Hearder : Authorization: Token 123erfnbb3hdiue2isdbbbewdbe
-END Points : http://127.0.0.1:8000/api/sensor/sensor-data/4bac6b90-e2d8-4c36-9638-54da23197be0/
+    Pass Token : Hearder : Authorization: Token 123erfnbb3hdiue2isdbbbewdbe
+    END Points : http://127.0.0.1:8000/api/sensor/sensor-data/4bac6b90-e2d8-4c36-9638-54da23197be0/
