@@ -23,6 +23,6 @@ These instructions will get you a copy of the project up and running on your loc
 1. **Clone the Repository**
 
 ```bash
-git clone https://yourproject.git
+git clone https://github.com/sharma-vishal006/IOT_APP.git
 cd yourproject
 
